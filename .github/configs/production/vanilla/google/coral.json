@@ -5,10 +5,10 @@
       "device": "coral",
       "vendor": "google",
       "name": "vanilla",
-      "defconfig": "ruby_defconfig",
+      "defconfig": "floral_defconfig",
       "extraConfig": "",
       "repo": "https://github.com/t25ons/kernel_msm-coral",
-      "branch": "main"
+      "branch": "android-msm-coral-4.14-android13"
     },
     "use_dtb": true,
     "kp": {
