@@ -58,7 +58,7 @@
     },
     "image": {
       "use": true,
-      "imageUrl": "https://github.com/prpjzz/builder-non-gki/releases/download/coral/boot.img",
+      "imageUrl": "https://github.com/prpjzz/android_device_google_coral-OFRP/releases/download/0.1/boot.img",
       "imageName": "boot.img"
     },
     "AnyKernel3": {
