@@ -7,8 +7,8 @@
       "name": "vanilla",
       "defconfig": "floral_defconfig",
       "extraConfig": "",
-      "repo": "https://github.com/t25ons/kernel_msm-coral",
-      "branch": "android-msm-coral-4.14-android13"
+      "repo": "https://github.com/freak07/FLORAL",
+      "branch": "master_T_floral_caf_27"
     },
     "use_dtb": true,
     "kp": {
@@ -57,12 +57,12 @@
       }
     },
     "image": {
-      "use": true,
+      "use": false,
       "imageUrl": "https://github.com/prpjzz/builder-non-gki/releases/download/coral/boot.img",
       "imageName": "boot.img"
     },
     "AnyKernel3": {
-      "use": false,
+      "use": true,
       "release": true,
       "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3",
       "branch": "ruby"
