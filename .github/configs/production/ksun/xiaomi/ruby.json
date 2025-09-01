@@ -3,37 +3,39 @@
     "kernelSource": {
       "device": "ruby",
       "vendor": "xiaomi",
-      "name": "kernelsu-next-susfs-158",
+      "name": "kernelsu-next-susfs-159",
       "defconfig": "ruby_defconfig",
       "extraConfig": "",
-      "repo": "https://github.com/RainyXeon/MoonWake",
-      "branch": "susfs-158"
+      "repo": "https://github.com/RainyXeon/kernel_xiaomi_ruby",
+      "branch": "susfs-159"
     },
     "use_dtb": false,
+    "use_python2": false,
     "kp": {
       "use": false,
       "kpimg_link": "https://github.com/SukiSU-Ultra/SukiSU_KernelPatch_patch/releases/download/0.12.0/kpimg"
     },
     "kernelsu": {
       "enable": true,
-      "setupLink": "https://raw.githubusercontent.com/sidex15/KernelSU-Next/refs/heads/next/kernel/setup.sh",
-      "setupArg": "next-susfs",
+      "setupLink": "https://raw.githubusercontent.com/kernel-build-from-rainyland/KernelSU-Next/refs/heads/next/kernel/setup.sh",
+      "setupArg": "next",
       "setupName": "KernelSU-Next",
       "needPatch": false,
       "susfsLink": ""
     },
     "toolchains": [
       {
-        "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r547379.tar.gz",
-        "branch": "15.0",
+        "repo": "https://gitlab.com/RainyXeon/clang-r563880.git",
+        "branch": "main",
         "name": "clang-AOSP",
-        "binPath": ["./bin"]
+        "binPath": ["/bin"]
       }
     ],
     "ccache": true,
     "params": {
       "ARCH": "arm64",
       "CC": "clang-AOSP/bin/clang",
+      "KCFLAGS": "-O2",
       "build_out": "Image.gz-dtb",
       "externalCommand": {
         "KBUILD_BUILD_HOST": "perfc.org",
@@ -57,8 +59,7 @@
     },
     "image": {
       "use": true,
-      "imageUrl": "https://github.com/kernel-build-from-rainyland/kernel_xiaomi_ruby/releases/download/cloud/boot.img",
-      "imageName": "boot.img"
+      "imageUrl": "https://github.com/kernel-build-from-rainyland/builder-non-gki/releases/download/cloud/xiaomi-ruby-original-boot.img"
     },
     "AnyKernel3": {
       "use": false,

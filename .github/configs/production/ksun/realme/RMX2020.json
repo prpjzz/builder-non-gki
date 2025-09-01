@@ -10,6 +10,7 @@
       "branch": "susfs-158"
     },
     "use_dtb": true,
+    "use_python2": false,
     "kp": {
       "use": false,
       "kpimg_link": "https://github.com/SukiSU-Ultra/SukiSU_KernelPatch_patch/releases/download/0.12.0/kpimg"
@@ -27,13 +28,14 @@
         "repo": "https://gitlab.com/sarthakroy2002/android_prebuilts_clang_host_linux-x86_clang-r437112b",
         "branch": "master",
         "name": "clang-AOSP",
-        "binPath": ["./bin"]
+        "binPath": ["/bin"]
       }
     ],
     "ccache": true,
     "params": {
       "ARCH": "arm64",
       "CC": "clang-AOSP/bin/clang",
+      "KCFLAGS": "-O2",
       "build_out": "Image.gz-dtb",
       "externalCommand": {
         "KBUILD_BUILD_HOST": "perfc.org",
@@ -63,8 +65,7 @@
     },
     "image": {
       "use": false,
-      "imageUrl": "",
-      "imageName": ""
+      "imageUrl": ""
     }
   }
 ]

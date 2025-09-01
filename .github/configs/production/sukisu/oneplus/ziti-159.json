@@ -1,18 +1,18 @@
-﻿[
+[
   {
     "kernelSource": {
-      "device": "ruby",
-      "vendor": "xiaomi",
+      "device": "ziti",
+      "vendor": "oneplus",
       "name": "sukisu-ultra-susfs-159",
-      "defconfig": "ruby_defconfig",
+      "defconfig": "ziti_defconfig",
       "extraConfig": "",
-      "repo": "https://github.com/RainyXeon/kernel_xiaomi_ruby",
+      "repo": "https://github.com/kernel-build-from-rainyland/kernel_oneplus_sm7325",
       "branch": "susfs-159"
     },
     "use_dtb": false,
     "use_python2": false,
     "kp": {
-      "use": true,
+      "use": false,
       "kpimg_link": "https://github.com/SukiSU-Ultra/SukiSU_KernelPatch_patch/releases/download/0.12.0/kpimg"
     },
     "kernelsu": {
@@ -35,8 +35,8 @@
     "params": {
       "ARCH": "arm64",
       "CC": "clang-AOSP/bin/clang",
-      "KCFLAGS": "-O2",
-      "build_out": "Image.gz-dtb",
+      "KCFLAGS": "-Wno-error=strict-prototypes -Wno-implicit-int",
+      "build_out": "Image",
       "externalCommand": {
         "KBUILD_BUILD_HOST": "perfc.org",
         "KBUILD_BUILD_USER": "rainyxeon",
@@ -59,13 +59,13 @@
     },
     "image": {
       "use": true,
-      "imageUrl": "https://github.com/kernel-build-from-rainyland/builder-non-gki/releases/download/cloud/xiaomi-ruby-original-boot.img"
+      "imageUrl": "https://github.com/kernel-build-from-rainyland/builder-non-gki/releases/download/cloud/oneplus-ziti-original-boot.img"
     },
     "AnyKernel3": {
       "use": false,
       "release": true,
       "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3",
-      "branch": "ruby"
+      "branch": "ziti"
     }
   }
 ]

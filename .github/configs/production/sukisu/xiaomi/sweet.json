@@ -3,37 +3,39 @@
     "kernelSource": {
       "device": "sweet",
       "vendor": "xiaomi",
-      "name": "sukisu-ultra-susfs-158",
+      "name": "sukisu-ultra-susfs-159",
       "defconfig": "sweet_defconfig",
       "extraConfig": "",
-      "repo": "https://github.com/kernel-build-from-rainyland/kernel_xiaomi_sweet",
-      "branch": "susfs"
+      "repo": "https://github.com/kernel-build-from-rainyland/vantom_next_kernel_xiaomi_sm6150",
+      "branch": "VantomNext"
     },
     "use_dtb": false,
+    "use_python2": false,
     "kp": {
       "use": false,
       "kpimg_link": ""
     },
     "kernelsu": {
       "enable": true,
-      "setupLink": "https://raw.githubusercontent.com/kernel-build-from-rainyland/SukiSU-Ultra/main/kernel/setup.sh",
-      "setupArg": "susfs-stable",
+      "setupLink": "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh",
+      "setupArg": "susfs-main",
       "setupName": "KernelSU",
       "needPatch": false,
       "susfsLink": ""
     },
     "toolchains": [
       {
-        "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r547379.tar.gz",
-        "branch": "15.0",
+        "repo": "https://gitlab.com/RainyXeon/clang-r563880.git",
+        "branch": "main",
         "name": "clang-AOSP",
-        "binPath": ["./bin"]
+        "binPath": ["/bin"]
       }
     ],
     "ccache": true,
     "params": {
       "ARCH": "arm64",
       "CC": "clang-AOSP/bin/clang",
+      "KCFLAGS": "-O2",
       "build_out": "Image.gz-dtb",
       "externalCommand": {
         "KBUILD_BUILD_HOST": "perfc.org",
@@ -63,8 +65,7 @@
     },
     "image": {
       "use": false,
-      "imageUrl": "",
-      "imageName": ""
+      "imageUrl": ""
     }
   }
 ]
